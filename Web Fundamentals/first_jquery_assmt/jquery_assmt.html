@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>JQuery Intro</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <link rel="stylesheet" type="text/css" href="jquery_assmt.css">
+      <script>
+      	$(document).ready(function(){
+      		//your jQuery here
+      		$('h1').click(function(){
+      			alert('you just clicked this!');
+      		});
+      		$('#hide').click(function() {
+      			$('p').hide();
+      		});
+
+      		$('#show').click(function() {
+      			$('p').show();
+      		});
+      		$('#button1').click(function() {
+      			$( "#third" ).toggle();
+			});
+      		$( "#clickme" ).click(function() {
+  				$( "#tree" ).slideDown( "slow", function() {
+ 				});
+			});
+			$( "#clickme" ).click(function() {
+  				$( "#tree" ).slideUp( "slow", function() {
+ 				 });
+			});
+			$( "#clickmealso" ).click(function() {
+  				$( "#flower" ).slideToggle( "fast", function() {
+  				});
+			});
+			$( "#clickmealso" ).click(function() {
+  				$( "#flower" ).fadeIn( "slow", function() {
+    				// Animation complete
+  				});
+			});
+			$( "#clickmealso" ).click(function() {
+  				$( "#flower" ).fadeOut( "slow", function() {
+    				// Animation complete
+  				});
+			});
+			$( "p" ).last().addClass( "selected" );
+			$( "h2" ).before( "<h1>I am a</h1>" );
+			$( "h2" ).after( "<h1>at Coding Dojo</h1>" );
+			$( "div.demo-container" ).html();
+
+			var title = $( "em" ).attr( "title" );
+			$( "h4" ).text( title );
+			
+      	});
+      </script>
+
+    	<!-- <script type="console.log($)"></script> -->
+    	<!-- <script type="console.log($())"></script> -->
+
+
+   </head>
+   <body>
+   	<h1>Noemi Barrientos</h1>
+   	<p>This is a paragraph</p>
+   	<p>This is the second paragraph!</p>
+   	<p id="third">Will disappear!</p>
+   	<button id="hide">This will hide all paragraphs!</button>
+   	<button id="show">Click to show all paragraphs</button>
+   	<button id="button1">First Button</button>
+   	<button id="button2">Second Button</button>
+   	<h2>Student</h2>
+    <div id="clickme">Click here!</div>
+    <img id="tree" src="tree.jpg" alt="" width="100" height="100">
+    <div id="clickmealso">Click here also!</div>
+    <img id="flower" src="flower.png" alt="" width="100" height="100">
+    <div class="selected">This is Purple</div>
+   	<div class="demo-container">
+  		<div class="demo-box">Demonstration Box</div>
+	</div>
+   	<p></p>
+   	<h4>Once there was a <em title="huge, gigantic">large</em> dinosaur...</h4>
+   	The title of the emphasis is:<div></div>
+
+   </body>
